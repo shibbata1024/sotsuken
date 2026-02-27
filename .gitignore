@@ -1,0 +1,51 @@
+# --- 1. Pythonのコンパイル・キャッシュ（必須） ---
+__pycache__/
+*.py[cod]
+*$py.class
+
+# --- 2. データセット（最重要：巨大ファイルを除外） ---
+# dataフォルダ内の全ファイルを除外
+data/
+# 誤ってルートに置いた場合も除外
+*.csv
+*.json
+*.xlsx
+*.parquet
+
+# --- 3. 分析・学習の成果物（画像やモデル） ---
+# プログラムを動かせば再生成できるものはGitに入れない
+*.png
+*.jpg
+*.svg
+*.pdf
+results/
+outputs/
+
+# 学習済みモデルや一時保存データ
+*.pkl
+*.npy
+*.npz
+*.h5
+*.pt
+*.joblib
+
+# --- 4. Jupyter Notebook (使う場合) ---
+.ipynb_checkpoints
+*-checkpoint.ipynb
+
+# --- 5. 仮想環境・パッケージ ---
+# Condaやvenvの環境フォルダ自体は除外
+env/
+venv/
+.venv/
+.env
+
+# --- 6. IDE・エディタ設定（個人の設定は共有しない） ---
+.vscode/
+.idea/
+*.swp
+
+# --- 7. OS固有の不要ファイル ---
+.DS_Store
+Thumbs.db
+Desktop.ini
